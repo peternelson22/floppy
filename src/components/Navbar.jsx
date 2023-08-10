@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { links } from '../utils/constants';
 import CartButtons from './CartButtons';
+import { useProductsContext } from '../context/products_context';
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
+
   return (
     <nav className='h-20 flex items-center justify-center'>
       <div className='w-[90vw] mx-auto max-w-6xl md:flex md:justify-between md:items-center'>
@@ -13,8 +16,9 @@ const Navbar = () => {
             <img src={logo} alt='floppy' className='w-32' />
           </Link>
           <button
+            onClick={openSidebar}
             type='button'
-            className='flex md:hidden bg-transparent border-transparent text-gray-700 cursor-pointer text-3xl'
+            className='flex md:hidden bg-transparent border-transparent text-blue-400 cursor-pointer text-3xl'
           >
             <FaBars />
           </button>
@@ -29,7 +33,7 @@ const Navbar = () => {
               >
                 <Link
                   to={url}
-                  className='text-base capitalize tracking-wider p-2 hover:border-b-teal-200 hover:border-b-2'
+                  className='text-base capitalize tracking-wider p-2 hover:border-b-blue-300 hover:border-b-2'
                 >
                   {text}
                 </Link>

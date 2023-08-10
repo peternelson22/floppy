@@ -3,7 +3,7 @@ import {
   About,
   Cart,
   Checkout,
-  Error,
+  ErrorPage,
   Home,
   Layout,
   PrivateRoute,
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -39,11 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'checkout',
-        element: (
-          <PrivateRoute>
-            <Checkout />
-          </PrivateRoute>
-        ),
+        element: <Checkout />,
       },
     ],
   },
