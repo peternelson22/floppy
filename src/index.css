@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading5 {
+    @apply text-white m-1 font-normal normal-case leading-tight;
+  }
+  .links {
+    @apply block text-left text-base capitalize py-4 px-6 tracking-wider transition-all duration-150 ease-linear hover:px-4 hover:py-4 hover:pl-8 hover:text-gray-600 hover:bg-slate-100;
+  }
+}
