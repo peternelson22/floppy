@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className='h-20 flex items-center justify-center'>
-      <div className='w-[90vw] mx-auto max-w-6xl md:flex md:justify-between md:items-center'>
+      <div className='w-[90vw] mx-auto max-w-6xl tb:flex tb:justify-between tb:items-center'>
         <div className='flex items-center justify-between'>
           <Link to='/'>
             <img src={logo} alt='floppy' className='w-32' />
@@ -18,12 +18,12 @@ const Navbar = () => {
           <button
             onClick={openSidebar}
             type='button'
-            className='flex md:hidden bg-transparent border-transparent text-blue-400 cursor-pointer text-3xl'
+            className='flex tb:hidden bg-transparent border-transparent text-blue-400 cursor-pointer text-3xl'
           >
             <FaBars />
           </button>
         </div>
-        <ul className='hidden md:flex md:justify-center'>
+        <ul className='hidden tb:flex tb:justify-center'>
           {links.map((link) => {
             const { id, text, url } = link;
             return (
@@ -41,7 +41,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className='hidden md:flex'>
+        <div className='hidden tb:flex'>
           <CartButtons />
         </div>
       </div>

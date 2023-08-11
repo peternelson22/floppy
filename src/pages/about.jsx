@@ -3,7 +3,7 @@ import aboutImg from '../assets/images/hero-bcg.jpeg';
 
 const About = () => {
   return (
-    <main className=''>
+    <main>
       <PageHero title='about' />
       <section className='grid md:grid-cols-2 gap-16 page global-section global-section-center'>
         <img

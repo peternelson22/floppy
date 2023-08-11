@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='h-20 flex flex-col md:flex-row justify-center items-center bg-gray-950 text-center'>
+    <footer className='h-20 flex flex-col tb:flex-row justify-center items-center bg-gray-950 text-center'>
       <h5 className='footer-heading5'>
         &copy; {new Date().getFullYear()}
         <span className='text-blue-400'> Floppy </span>
