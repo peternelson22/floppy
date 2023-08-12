@@ -18,7 +18,7 @@ const Hero = () => {
           shop now
         </Link>
       </article>
-      <article className='hidden tb:block tb:relative tb:before:absolute tb:before:w-[10%] tb:before:h-[80%] tb:before:bg-blue-200 tb:before:bottom-[0%] tb:before:-left-[8%] tb:before:rounded-md'>
+      <article className='hidden tb:block tb:relative tb:before:content-[] tb:before:absolute tb:before:w-[10%] tb:before:h-[80%] tb:before:bg-blue-200 tb:before:bottom-[0%] tb:before:-left-[8%] tb:before:rounded-md'>
         <img
           src={hero1}
           alt='nice table'
