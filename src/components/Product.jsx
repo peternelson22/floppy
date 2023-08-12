@@ -1,5 +1,6 @@
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { formatPrice } from '../utils/helpers';
 const Product = ({ id, image, name, price }) => {
   return (
     <article>
@@ -19,7 +20,7 @@ const Product = ({ id, image, name, price }) => {
       <footer className='mt-4 flex justify-between items-center'>
         <h5 className='font-normal mb-0 global-h5'>{name}</h5>
         <p className='font-normal mb-0 text-blue-400 tracking-wider global-p'>
-          {price}
+          {formatPrice(price)}
         </p>
       </footer>
     </article>

@@ -25,7 +25,7 @@ const Error = () => {
   return (
     <main className='min-h-[calc(100vh-10rem)] bg-blue-100 flex justify-center items-center text-center'>
       <div>
-        <h3>something went wrong</h3>
+        <h3 className='global-h2'>something went wrong...</h3>
       </div>
     </main>
   );

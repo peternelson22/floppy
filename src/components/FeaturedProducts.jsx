@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
     <section className='bg-gray-100 global-section'>
       <div className=''>
         <h2 className='text-center global-h2'>Featured Products</h2>
-        <div className='w-24 h-1 bg-blue-300 mx-auto'></div>
+        <div className='global-underline'></div>
       </div>
       <div className='global-section-center mx-auto my-16 grid gap-10 sm:grid-cols-fluid'>
         {featured.slice(0, 3).map((product) => (

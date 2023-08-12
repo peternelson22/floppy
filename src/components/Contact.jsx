@@ -13,7 +13,7 @@ const Contact = () => {
           <form
             action='https://formspree.io/f/xaygebdp'
             method='POST'
-            className='w-[90vw] max-w-[500px] grid grid-cols-[1fr_auto]'
+            className='w-[90vw] max-w-[550px] grid grid-cols-[1fr_auto]'
           >
             <input
               name='_replyto'

@@ -10,7 +10,10 @@
     @apply block text-left text-base capitalize py-4 px-6 tracking-wider transition-all duration-150 ease-linear hover:px-4 hover:py-4 hover:pl-8 hover:text-gray-600 hover:bg-slate-100;
   }
   .page {
-    @apply min-h-[calc(100vh-(20vh+10rem))];
+    @apply min-h-[calc(100vh-(15vh+10rem))];
+  }
+  .page-100 {
+    @apply min-h-[calc(100vh-10rem)];
   }
   .global-section {
     @apply py-16 px-0;
@@ -47,5 +50,8 @@
   }
   .global-transition {
     @apply transition-all duration-150 ease-linear;
+  }
+  .product-info {
+    @apply capitalize w-[300px] grid grid-cols-[125px_1fr];
   }
 }
