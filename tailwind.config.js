@@ -9,6 +9,7 @@ export default {
       screens: {
         tb: '994px',
         lb: '1280px',
+        lm: '1170px',
       },
     },
   },

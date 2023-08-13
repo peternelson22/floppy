@@ -9,7 +9,7 @@ const Navbar = () => {
   const { openSidebar } = useProductsContext();
 
   return (
-    <nav className='h-20 flex items-center justify-center'>
+    <nav className='h-20 flex items-center justify-center z-999'>
       <div className='w-[90vw] mx-auto max-w-6xl tb:flex tb:justify-between tb:items-center'>
         <div className='flex items-center justify-between'>
           <Link to='/'>

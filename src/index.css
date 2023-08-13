@@ -54,4 +54,16 @@
   .product-info {
     @apply capitalize w-[300px] grid grid-cols-[125px_1fr];
   }
+  .sort-btn {
+    @apply bg-transparent border border-solid border-gray-700 text-gray-600 w-6 h-6 rounded-md flex items-center justify-center cursor-pointer text-base;
+  }
+  .filter-btn {
+    @apply block mx-0 my-1 capitalize px-0 py-1 bg-transparent border-none border-b-transparent border-b cursor-pointer tracking-wide text-gray-500;
+  }
+  .color-all-btn {
+    @apply flex items-center justify-center mr-2 opacity-50;
+  }
+  .color-color-btn {
+    @apply w-4 h-4 rounded-full mr-2 border-none  cursor-pointer flex opacity-50 items-center justify-center;
+  }
 }

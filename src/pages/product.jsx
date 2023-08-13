@@ -56,7 +56,7 @@ const Product = () => {
         <Link to='/products' className='btn'>
           back to products
         </Link>
-        <div className='grid gap-16 mt-8 tb:grid-cols-[1fr_1fr] tb:items-center'>
+        <div className='grid gap-16 mt-8 tb:grid-cols-[1fr_1fr] tb:items-center tb:justify-center'>
           <ProductImages images={images} />
           <section>
             <h2 className='global-h2'>{name}</h2>

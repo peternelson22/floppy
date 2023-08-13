@@ -10,7 +10,7 @@ const CartButtons = () => {
       <Link
         to='/cart'
         onClick={closeSidebar}
-        className='text-gray-500 text-base tracking-wide flex items-center font-mono font-medium'
+        className='text-gray-600 text-base tracking-wide flex items-center font-mono font-medium'
       >
         Cart
         <span className='flex items-center relative'>
@@ -23,10 +23,10 @@ const CartButtons = () => {
       <button
         type='button'
         // onClick={closeSidebar}
-        className='flex items-center justify-center p-[1px] bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-50 font-mono font-medium'
+        className='flex items-center justify-center p-[1px] bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-medium'
       >
         Login
-        <FaUserPlus className='ml-1' />
+        <FaUserPlus className='ml-1 text-gray-700' />
       </button>
     </div>
   );
