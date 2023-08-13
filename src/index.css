@@ -13,7 +13,7 @@
     @apply min-h-[calc(100vh-(15vh+10rem))];
   }
   .page-100 {
-    @apply min-h-[calc(100vh-10rem)];
+    @apply min-h-[calc(100vh-10rem)] py-20 px-0;
   }
   .global-section {
     @apply py-16 px-0;
@@ -65,5 +65,8 @@
   }
   .color-color-btn {
     @apply w-4 h-4 rounded-full mr-2 border-none  cursor-pointer flex opacity-50 items-center justify-center;
+  }
+  .cart-content-btn {
+    @apply bg-transparent border-transparent capitalize py-1 px-2 bg-blue-400 text-white rounded-md tracking-wider font-normal cursor-pointer hover:text-blue-200;
   }
 }

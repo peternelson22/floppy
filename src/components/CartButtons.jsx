@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
 import { useProductsContext } from '../context/products_context';
+import { useCartContext } from '../context/cart_context';
 
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
+  const { totalItems } = useCartContext();
 
   return (
     <div className='grid grid-cols-[1fr_1fr] items-center w-[225px]'>
@@ -15,8 +17,8 @@ const CartButtons = () => {
         Cart
         <span className='flex items-center relative'>
           <FaShoppingCart className='h-6 ml-1' />
-          <span className='absolute -top-[10px] -right-4 bg-blue-300 w-4 h-4 flex items-center justify-center rounded-full text-xs text-white p-3'>
-            6
+          <span className='absolute -top-[10px] -right-4 bg-blue-400 w-4 h-4 flex items-center justify-center rounded-full text-sm text-white p-3'>
+            {totalItems}
           </span>
         </span>
       </Link>
