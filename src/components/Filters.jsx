@@ -24,7 +24,7 @@ const Filters = () => {
   const colors = getUniqueValues(allProducts, 'colors');
   return (
     <section>
-      <div className='sm:sticky top-4'>
+      <div className='sm:sticky top-4 mb-8'>
         <form onSubmit={(e) => e.preventDefault()}>
           <div className='mb-5'>
             <input
@@ -65,10 +65,10 @@ const Filters = () => {
                   name='company'
                   value={company}
                   onChange={updateFilters}
-                  className='bg-gray-100 rounded-md border-transparent p-1'
+                  className='bg-gray-100 rounded-md border-transparent p-1 capitalize'
                 >
                   {companies.map((c, index) => (
-                    <option key={index} value={c}>
+                    <option key={index} value={c} className='capitalize'>
                       {c}
                     </option>
                   ))}
@@ -86,6 +86,7 @@ const Filters = () => {
                           name='color'
                           style={{ background: c }}
                           data-color='all'
+                          onClick={updateFilters}
                           className={`${
                             color === 'all'
                               ? 'color-all-btn filter-btn underline'

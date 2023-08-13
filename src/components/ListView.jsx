@@ -3,7 +3,7 @@ import { formatPrice } from '../utils/helpers';
 
 const ListView = ({ products }) => {
   return (
-    <section className='grid, gap-y-12'>
+    <section className='grid gap-y-12 mb-4'>
       {products.map((product) => {
         const { id, image, name, price, description } = product;
         return (

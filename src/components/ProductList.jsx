@@ -4,14 +4,23 @@ import ListView from './ListView';
 import Loading from './Loading';
 
 const ProductList = () => {
-  const { filteredProducts: products, gridView } = useFilterContext();
+  const {
+    filteredProducts: products,
+    allProducts,
+    gridView,
+  } = useFilterContext();
 
-  // if (products === undefined) {
-  //   return <Loading />;
-  // }
+  if (allProducts.length < 1 && Array.isArray(allProducts)) {
+    return <Loading />;
+  }
 
   if (products.length < 1) {
-    return <Loading />;
+    return (
+      <h5 className='normal-case tracking-widest font-semibold global-h5'>
+        {' '}
+        Sorry, no products matched your search...
+      </h5>
+    );
   }
 
   if (gridView === false) {
