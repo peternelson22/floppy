@@ -14,7 +14,7 @@ const ListView = ({ products }) => {
             <img
               src={image}
               alt={name}
-              className='w-[300px] block h-52 object-cover rounded-md mb-4'
+              className='w-full sm:w-[300px] block h-52 object-cover rounded-md mb-4'
             />
             <div className='mb-4'>
               <h4 className='global-h4 mb-2'>{name}</h4>

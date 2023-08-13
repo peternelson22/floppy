@@ -24,7 +24,7 @@ const Filters = () => {
   const colors = getUniqueValues(allProducts, 'colors');
   return (
     <section>
-      <div className='md:sticky top-4'>
+      <div className='sm:sticky top-4'>
         <form onSubmit={(e) => e.preventDefault()}>
           <div className='mb-5'>
             <input
@@ -36,101 +36,110 @@ const Filters = () => {
               className='p-2 bg-gray-100 rounded-md border-transparent tracking-wide placeholder:capitalize'
             />
           </div>
-          <div className='mb-5'>
-            <h5 className='global-h5 mb-2'>category</h5>
+          {/* grid */}
+          <div className='grid grid-cols-2 sm:grid-cols-none sm:grid-rows-1'>
             <div>
-              {categories.map((c, index) => (
-                <button
-                  key={index}
-                  onClick={updateFilters}
-                  type='button'
-                  name='category'
-                  className={`filter-btn ${
-                    category === c ? 'bg-gray-200 rounded-md px-2' : null
-                  }`}
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className='mb-5'>
-            <h5 className='global-h5'>company</h5>
-            <select
-              name='company'
-              value={company}
-              onChange={updateFilters}
-              className='bg-gray-100 rounded-md border-transparent p-1'
-            >
-              {companies.map((c, index) => (
-                <option key={index} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className='mb-5'>
-            <h5 className='global-h5'>colors</h5>
-            <div className='flex items-center'>
-              {colors.map((c, index) => {
-                if (c === 'all') {
-                  return (
+              <div className='mb-5'>
+                <h5 className='global-h5 mb-2'>category</h5>
+                <div>
+                  {categories.map((c, index) => (
                     <button
                       key={index}
-                      name='color'
-                      style={{ background: c }}
-                      data-color='all'
-                      className={`${
-                        color === 'all'
-                          ? 'color-all-btn filter-btn underline'
-                          : 'color-all-btn filter-btn'
+                      onClick={updateFilters}
+                      type='button'
+                      name='category'
+                      className={`filter-btn ${
+                        category === c ? 'bg-gray-200 rounded-md px-2' : null
                       }`}
                     >
-                      all
+                      {c}
                     </button>
-                  );
-                }
-                return (
-                  <button
-                    key={index}
-                    name='color'
-                    style={{ background: c }}
-                    onClick={updateFilters}
-                    data-color={c}
-                    className={`filter-btn color-color-btn ${
-                      color === c ? 'opacity-100' : 'opacity-50'
-                    }`}
-                  >
-                    {color === c ? (
-                      <FaCheck className='text-[0.5rem] text-white' />
-                    ) : null}
-                  </button>
-                );
-              })}
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='mb-5'>
+                <h5 className='global-h5'>company</h5>
+                <select
+                  name='company'
+                  value={company}
+                  onChange={updateFilters}
+                  className='bg-gray-100 rounded-md border-transparent p-1'
+                >
+                  {companies.map((c, index) => (
+                    <option key={index} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className='mb-5'>
+                <h5 className='global-h5'>colors</h5>
+                <div className='flex items-center'>
+                  {colors.map((c, index) => {
+                    if (c === 'all') {
+                      return (
+                        <button
+                          key={index}
+                          name='color'
+                          style={{ background: c }}
+                          data-color='all'
+                          className={`${
+                            color === 'all'
+                              ? 'color-all-btn filter-btn underline'
+                              : 'color-all-btn filter-btn'
+                          }`}
+                        >
+                          all
+                        </button>
+                      );
+                    }
+                    return (
+                      <button
+                        key={index}
+                        name='color'
+                        style={{ background: c }}
+                        onClick={updateFilters}
+                        data-color={c}
+                        className={`filter-btn color-color-btn ${
+                          color === c ? 'opacity-100' : 'opacity-50'
+                        }`}
+                      >
+                        {color === c ? (
+                          <FaCheck className='text-[0.5rem] text-white' />
+                        ) : null}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className='mb-5'>
+                <h5 className='global-h5'>price</h5>
+                <p className='global-p mb-1'>{formatPrice(price)}</p>
+                <input
+                  type='range'
+                  name='price'
+                  onChange={updateFilters}
+                  min={min_price}
+                  max={max_price}
+                  value={price}
+                />
+              </div>
+              <div className='mb-5 grid grid-cols-[auto_1fr] items-center capitalize gap-x-2 text-base'>
+                <label htmlFor='shipping'>free shipping</label>
+                <input
+                  type='checkbox'
+                  name='shipping'
+                  id='shipping'
+                  checked={shipping}
+                  onChange={updateFilters}
+                />
+              </div>
             </div>
           </div>
-          <div className='mb-5'>
-            <h5 className='global-h5'>price</h5>
-            <p className='global-p mb-1'>{formatPrice(price)}</p>
-            <input
-              type='range'
-              name='price'
-              onChange={updateFilters}
-              min={min_price}
-              max={max_price}
-              value={price}
-            />
-          </div>
-          <div className='mb-5 grid grid-cols-[auto_1fr] items-center capitalize gap-x-2 text-base'>
-            <label htmlFor='shipping'>free shipping</label>
-            <input
-              type='checkbox'
-              name='shipping'
-              id='shipping'
-              checked={shipping}
-              onChange={updateFilters}
-            />
-          </div>
+          {/* grid end */}
         </form>
         <button
           type='button'

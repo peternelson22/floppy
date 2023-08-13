@@ -8,7 +8,7 @@ const Products = () => {
     <main>
       <PageHero title='products' />
       <div className='page'>
-        <div className='global-section-center grid gap-y-12 gap-x-6 mt-16 mx-auto md:grid-cols-[200px_1fr]'>
+        <div className='global-section-center grid gap-y-12 gap-x-6 mt-16 mx-auto sm:grid-cols-[200px_1fr]'>
           <Filters />
           <div className=''>
             <Sort />

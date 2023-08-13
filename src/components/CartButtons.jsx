@@ -23,10 +23,10 @@ const CartButtons = () => {
       <button
         type='button'
         // onClick={closeSidebar}
-        className='flex items-center justify-center p-[1px] bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-medium'
+        className='flex items-center justify-center p-1 bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-normal'
       >
         Login
-        <FaUserPlus className='ml-1 text-gray-700' />
+        <FaUserPlus className='ml-1 text-gray-500' />
       </button>
     </div>
   );
