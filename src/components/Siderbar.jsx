@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { links } from '../utils/constants';
 import CartButtons from '../components/CartButtons';
 import { useProductsContext } from '../context/products_context';
+import { useUserContext } from '../context/user_context';
 
 const Siderbar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
 
   return (
     <div className='text-center'>
@@ -34,11 +36,13 @@ const Siderbar = () => {
               </li>
             );
           })}
-          <li className='sidebar-links'>
-            <Link to='/checkout' onClick={closeSidebar}>
-              checkout
-            </Link>
-          </li>
+          {myUser && (
+            <li className='sidebar-links'>
+              <Link to='/checkout' onClick={closeSidebar}>
+                checkout
+              </Link>
+            </li>
+          )}
         </ul>
         <div className='mx-auto flex justify-center items-center'>
           <CartButtons />

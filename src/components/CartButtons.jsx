@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
 import { useProductsContext } from '../context/products_context';
 import { useCartContext } from '../context/cart_context';
+import { useUserContext } from '../context/user_context';
 
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { totalItems } = useCartContext();
+  const { logout, loginWithRedirect, myUser } = useUserContext();
 
   return (
     <div className='grid grid-cols-[1fr_1fr] items-center w-[225px]'>
@@ -22,14 +24,25 @@ const CartButtons = () => {
           </span>
         </span>
       </Link>
-      <button
-        type='button'
-        // onClick={closeSidebar}
-        className='flex items-center justify-center p-1 bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-normal'
-      >
-        Login
-        <FaUserPlus className='ml-1 text-gray-500' />
-      </button>
+      {myUser ? (
+        <button
+          type='button'
+          onClick={() => logout({ retureTo: window.location.origin })}
+          className='flex items-center justify-center p-1 bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-normal'
+        >
+          Logout
+          <FaUserMinus className='ml-1 text-gray-500' />
+        </button>
+      ) : (
+        <button
+          type='button'
+          onClick={loginWithRedirect}
+          className='flex items-center justify-center p-1 bg-blue-400 shadow hover:shadow-md rounded-xl border-transparent text-base cursor-pointer tracking-tight text-gray-200 font-mono font-normal'
+        >
+          Login
+          <FaUserPlus className='ml-1 text-gray-500' />
+        </button>
+      )}
     </div>
   );
 };

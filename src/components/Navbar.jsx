@@ -4,12 +4,13 @@ import { FaBars } from 'react-icons/fa';
 import { links } from '../utils/constants';
 import CartButtons from './CartButtons';
 import { useProductsContext } from '../context/products_context';
+import { useUserContext } from '../context/user_context';
 
 const Navbar = () => {
   const { openSidebar } = useProductsContext();
-
+  const { myUser } = useUserContext();
   return (
-    <nav className='h-20 flex items-center justify-center z-999'>
+    <nav className='h-20 flex items-center justify-center z-999 border-b shadow-sm'>
       <div className='w-[90vw] mx-auto max-w-6xl tb:flex tb:justify-between tb:items-center'>
         <div className='flex items-center justify-between'>
           <Link to='/'>
@@ -40,6 +41,16 @@ const Navbar = () => {
               </li>
             );
           })}
+          {myUser && (
+            <li>
+              <Link
+                to='/checkout'
+                className='text-base capitalize tracking-wider p-2 hover:border-b-blue-300 hover:text-blue-300 hover:border-b-2'
+              >
+                checkout
+              </Link>
+            </li>
+          )}
         </ul>
         <div className='hidden tb:flex'>
           <CartButtons />

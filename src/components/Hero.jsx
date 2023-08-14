@@ -4,15 +4,14 @@ import hero2 from '../assets/images/hero-bcg-2.jpeg';
 
 const Hero = () => {
   return (
-    <section className='global-section-center min-h-[60vh] grid place-items-center  tb:h-[calc(100vh-5rem)] tb:grid-cols-[1fr_1fr] tb:gap-32'>
+    <section className='global-section-center min-h-[60vh] grid place-items-center  tb:h-[calc(100vh-5rem)]  tb:grid-cols-2 tb:gap-x-[500px]'>
       <article>
         <h1 className='global-h1 tb:mb-8'>
           design your <br /> comfort zone
         </h1>
-        <p className='leading-loose max-w-[45em] mb-8 tb:text-xl text-gray-500 text-base'>
+        <p className='leading-loose  mb-8 tb:text-xl text-gray-500 text-base'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
-          labore reiciendis consequatur, qui mollitia voluptatibus alias, fugiat
-          natus exercitationem beatae commodi dignissimos.
+          labore reiciendis consequatur, qui mollitia voluptatibus
         </p>
         <Link to='products' className='btn tb:px-6 tb:py-3'>
           shop now
