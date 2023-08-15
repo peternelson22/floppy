@@ -2,15 +2,17 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Siderbar from '../components/Siderbar';
-import Error from './error';
+import AuthWrapper from './auth_wrapper';
 
 const Layout = () => {
   return (
     <div>
-      <Navbar />
-      <Siderbar />
-      <Outlet />
-      <Footer />
+      <AuthWrapper>
+        <Navbar />
+        <Siderbar />
+        <Outlet />
+        <Footer />
+      </AuthWrapper>
     </div>
   );
 };

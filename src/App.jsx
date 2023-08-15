@@ -39,11 +39,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'checkout',
-        element: (
-          <PrivateRoute>
-            <Checkout />
-          </PrivateRoute>
-        ),
+        element: <PrivateRoute />,
+        children: [
+          {
+            index: true,
+            element: <Checkout />,
+          },
+        ],
       },
     ],
   },

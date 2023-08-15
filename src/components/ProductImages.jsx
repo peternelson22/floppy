@@ -6,7 +6,7 @@ const ProductImages = ({ images = [[]] }) => {
     <section>
       <img
         src={main.url}
-        alt='main image'
+        alt='main'
         className='h-[300px] w-full block rounded-md object-cover md:h-[450px] tb:h-[500px]'
       />
       <div className='mt-4 grid grid-cols-5 gap-x-4'>
