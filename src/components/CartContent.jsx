@@ -13,7 +13,7 @@ const CartContent = () => {
         <CartItem key={item.id} {...item} />
       ))}
       <hr />
-      <div className='flex justify-between mt-8'>
+      <div className='flex justify-between mt-8 gap-x-1'>
         <Link to='/products' className='cart-content-btn '>
           continue shopping
         </Link>

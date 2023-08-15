@@ -67,6 +67,6 @@
     @apply w-4 h-4 rounded-full mr-2 border-none  cursor-pointer flex opacity-50 items-center justify-center;
   }
   .cart-content-btn {
-    @apply bg-transparent border-transparent capitalize py-1 px-2 bg-blue-400 text-white rounded-md tracking-wider font-normal cursor-pointer hover:text-blue-200;
+    @apply bg-transparent border-transparent capitalize py-1 px-1 sm:px-2 bg-blue-400 text-white rounded-md tracking-normal sm:tracking-wider font-light sm:font-normal cursor-pointer hover:text-blue-200;
   }
 }

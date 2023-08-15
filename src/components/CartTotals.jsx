@@ -8,7 +8,7 @@ const CartTotals = () => {
   const { myUser, loginWithRedirect } = useUserContext();
 
   return (
-    <section className='mt-12 flex justify-center md:justify-end'>
+    <section className='mt-12 flex justify-center md:justify-end overflow-hidden'>
       <div>
         <article className='border border-solid border-gray-600 rounded-md py-6 px-12'>
           <h5 className='grid grid-cols-[200px_1fr] global-h5'>
