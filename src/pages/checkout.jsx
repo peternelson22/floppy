@@ -4,8 +4,10 @@ const Checkout = () => {
   return (
     <main>
       <PageHero title='checkout' />
-      <div className='page'>
-        <h1>checkout</h1>
+      <div className='page flex items-center justify-center peer:'>
+        <h1 className='text-5xl text-red-800  '>
+          Didn't implement checkout yet
+        </h1>
       </div>
     </main>
   );
